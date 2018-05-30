@@ -5,11 +5,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Playlist"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/music_player"
+        android:roundIcon="@drawable/musical_notes"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PlaylistActivity">
+        <activity android:name=".PlaylistActivity"
+            android:label="@string/playlist">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PlayerActivity"
-            android:label="Playing"/>
+            android:label="@string/now_playing"/>
+
     </application>
 
 </manifest>
