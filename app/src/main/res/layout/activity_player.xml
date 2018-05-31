@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".PlayerActivity">
 
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:src="@drawable/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:text="List"/>
+
     <ImageView
         android:id="@+id/player_image"
         android:layout_width="match_parent"

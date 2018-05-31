@@ -1,6 +1,7 @@
 package com.androidangel.player;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,8 @@ public class PlayerActivity extends AppCompatActivity {
     private ImageButton mPauseBtn;
     private ImageButton mResetBtn;
     private ImageView mPlayerImage;
+    private ImageButton mBackBtn;
+
 
 
     @Override
@@ -55,13 +58,21 @@ public class PlayerActivity extends AppCompatActivity {
 
     @SuppressLint("WrongViewCast")
     private void initializeUI() {
-
+        mBackBtn = findViewById(R.id.back_btn);
         mPlayBtn = findViewById(R.id.btn_play);
         mPauseBtn = findViewById(R.id.btn_pause);
         mResetBtn = findViewById(R.id.btn_reset);
         mSeekBarAudio = findViewById(R.id.seekbar_view);
 
         mPlayerImage = findViewById(R.id.imageView);
+
+        mBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent = new Intent(PlayerActivity.this,PlaylistActivity.class);
+                startActivity(backIntent);
+            }
+        });
 
         mPlayBtn.setOnClickListener(new View.OnClickListener() {
             @Override
